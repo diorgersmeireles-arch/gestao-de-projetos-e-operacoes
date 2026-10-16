@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      desenvolvimento:
+        dependency-type: development
+      producao:
+        dependency-type: production
+    ignore:
+      # Versões novas do Capacitor exigem migração planejada (ver docs/projeto-v1-offline.md).
+      - dependency-name: '@capacitor/*'
+        update-types: ['version-update:semver-major']
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: gradle
+    directory: /android
+    schedule:
+      interval: monthly

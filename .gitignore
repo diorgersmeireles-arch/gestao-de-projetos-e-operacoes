@@ -1,0 +1,40 @@
+# Dependências
+node_modules/
+
+# Build da web
+dist/
+*.tsbuildinfo
+
+# APKs e pacotes gerados (distribua pelo GitHub Releases)
+release/
+*.apk
+*.aab
+
+# Testes
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Segredos e assinatura (nunca versionar)
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+keystore.properties
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Claude Code: skills de terceiros são instaladas localmente (veja CONTRIBUTING.md)
+.claude/skills/
+.claude/settings.local.json

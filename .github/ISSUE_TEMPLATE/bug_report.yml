@@ -1,0 +1,39 @@
+name: Relatar problema
+description: Algo no app não funciona como deveria.
+labels: [bug]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o problema e o que você esperava que acontecesse.
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Como reproduzir
+      placeholder: |
+        1. Abra a aba Tarefas
+        2. Toque em ...
+        3. Veja o erro
+    validations:
+      required: true
+  - type: input
+    id: versao
+    attributes:
+      label: Versão do app
+      description: Aparece no nome do APK ou em Configurações → Apps.
+      placeholder: 0.4.0
+    validations:
+      required: true
+  - type: input
+    id: aparelho
+    attributes:
+      label: Aparelho e versão do Android
+      placeholder: Samsung A15, Android 14
+  - type: textarea
+    id: capturas
+    attributes:
+      label: Capturas de tela
+      description: Arraste imagens para cá, se tiver.
